@@ -1,4 +1,4 @@
-
+@import '../../main-styles.scss';
 
 .top-bar {
     display: flex;
@@ -17,7 +17,7 @@ h1 {
     letter-spacing: 3px;
     font-weight: 900;
     text-transform: uppercase;
-    color: darkblue;
+    color: $dark;
 }
 
 .total-budget-section {
@@ -36,11 +36,11 @@ h1 {
     
  
     &.green {
-        color: lighten(green, 55%);
+        color: lighten($light-green, 8%);
     }
  
     &.red {
-        color: lighten(red, 25%);
+        color: lighten($red, 12%);
     }
 
 }}
