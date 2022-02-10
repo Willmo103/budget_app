@@ -1,5 +1,5 @@
 <form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
-    <div class="is-horizontal" style="width: 600px; justify-content: center; align-items: center;">
+    <div class="is-horizontal" style="width: 540px; justify-content: center; align-items: center;">
         <div class="field-body">
 
             <div class="field is-narrow" style="margin-right: 3px;">
@@ -15,7 +15,10 @@
             </div>
             
             <div class="field is-narrow">
-                <button class="button is-primary" required [disabled]="!itemForm.valid">Add</button>
+                <button type="submit" class="button" [ngClass]="{ 'is-primary': isNewItem, 'is-success': !isNewItem }" [disabled]="!itemForm.valid">
+                <p *ngIf="isNewItem">Add</p>
+                <p *ngIf="!isNewItem">Submit</p>
+                </button>
             </div>
             
         </div>

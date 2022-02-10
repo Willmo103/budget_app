@@ -85,6 +85,6 @@
     }
 
     .amount{
-        background-color: $light-red;
+        background-color: darken($light-red, $amount: 3%);
     }
 }
